@@ -11,7 +11,8 @@
     --color-principal:hsl(0, 0%, 94%);
     --color-bloque: hsl(0, 0%, 100%);
     --smokey-gray: hsl(0, 1%, 44%);
-    --Purple: hsl(259, 100%, 65%);
+    --off-black: hsl(0, 0%, 8%);
+    --purple: hsl(259, 100%, 65%);
 }
 
 body {
@@ -40,7 +41,6 @@ main {
     grid-template-columns: auto auto auto;
     font-family: var(--fuente);
     margin-right: 7rem;
-    margin-bottom: 3rem;
 }
 
 h4 {
@@ -54,8 +54,9 @@ h4 {
 }
 
 input {
-
-    font-size: 35px;
+    font-family: var(--fuente);
+    font-weight: 700;
+    font-size: 40px;
     border: solid 1.5px var(--light-grey);
     border-radius: 10px;
     padding: 1.2rem;
@@ -67,12 +68,29 @@ input::placeholder {
     padding: 0.5rem;
 }
 
-hr {
-    width: 86%;
+input:hover, input:focus {
+    border: 1.5px solid var(--purple);
+    cursor: pointer;
 }
 
-img {
+hr {
+    display: inline-block;
+    width: 88%;
+    color: var(--light-grey);
+    margin-top: 3rem;
+}
+
+.icon {
     float: right;
+    padding: 25px;
+    background-color: var(--purple);
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+}
+
+.icon:hover {
+    background-color: var(--off-black);
 }
 
 .contenido_a_mostrar {
@@ -83,7 +101,7 @@ img {
 }
 
 .estilo_de_linea {
-    color: var(--Purple);
+    color: var(--purple);
 }
 
 p {
